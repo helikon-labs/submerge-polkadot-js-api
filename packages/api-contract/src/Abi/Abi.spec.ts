@@ -160,7 +160,7 @@ describe('Abi', (): void => {
       const expectedEvent = {
         from: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
         to: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-        value: '123.4567 MUnit'
+        value: '123456789000000000000'
       };
 
       expect(decodedEventHuman).toEqual(expectedEvent);
@@ -192,7 +192,7 @@ describe('Abi', (): void => {
       const expectedEvent = {
         from: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
         to: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-        value: '123.4567 MUnit'
+        value: '123456789000000000000'
       };
 
       expect(decodedEventHuman).toEqual(expectedEvent);
@@ -226,7 +226,7 @@ describe('Abi', (): void => {
       const expectedEvent = {
         from: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
         to: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-        value: '123.4567 MUnit'
+        value: '123456789000000000000'
       };
 
       expect(decodedEventHuman).toEqual(expectedEvent);

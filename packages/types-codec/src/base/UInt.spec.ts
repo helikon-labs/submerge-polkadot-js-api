@@ -67,7 +67,7 @@ describe('UInt', (): void => {
   it('allows for construction via BigInt', (): void => {
     expect(
       new UInt(registry, 123456789123456789123456789n, 128).toHuman()
-    ).toEqual('123,456,789,123,456,789,123,456,789');
+    ).toEqual('123456789123456789123456789');
   });
 
   it('converts to Little Endian from the provided value', (): void => {
@@ -181,10 +181,10 @@ describe('UInt', (): void => {
     });
 
     it('has proper toHuman() for PerMill/PerBill/Percent/Balance', (): void => {
-      expect(registry.createType('Perbill', 12_340_000).toHuman()).toEqual('1.23%');
-      expect(registry.createType('Percent', 12).toHuman()).toEqual('12.00%');
-      expect(registry.createType('Permill', 16_900).toHuman()).toEqual('1.69%');
-      expect(registry.createType('Balance', '123456789012345').toHuman()).toEqual('123.4567 Unit');
+      expect(registry.createType('Perbill', 12_340_000).toHuman()).toEqual('12340000');
+      expect(registry.createType('Percent', 12).toHuman()).toEqual('12');
+      expect(registry.createType('Permill', 16_900).toHuman()).toEqual('16900');
+      expect(registry.createType('Balance', '123456789012345').toHuman()).toEqual('123456789012345');
     });
   });
 

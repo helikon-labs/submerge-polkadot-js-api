@@ -21,7 +21,7 @@ describe('SystemInherentData', (): void => {
       validationData: {
         maxPovSize: '0',
         parentHead: '0xd51627af4cb8414b6ad454e7204424e7e8489738c5fabe20cee3256bd69b7534d12b2798b04e574d05fb8a4b163745b1e610fb75de59399271bd57e49738506a7a93ee0038dd6a1b3bfbb58f747a7b2052058620839a8e2d03f5a43b48ca6000c66a00',
-        relayParentNumber: '38,441',
+        relayParentNumber: '38441',
         relayParentStorageRoot: '0x4412f5d19eed1a0cbafadd3b050b6e87fbcdff0a4b2ab0dce498d2180f7d7fe4'
       }
     });

@@ -38,13 +38,13 @@ describe('BitVec', (): void => {
     it('defaults to Lsb', (): void => {
       expect(
         new BitVec(registry, '0x0100010500').toHuman()
-      ).toEqual('0b10000000_00000000_10000000_10100000_00000000');
+      ).toEqual('0x800080a000'); // LSB
     });
 
     it('can output to Msb', (): void => {
       expect(
         new BitVec(registry, '0x0100010500', true).toHuman()
-      ).toEqual('0b00000001_00000000_00000001_00000101_00000000');
+      ).toEqual('0x0100010500'); // MSB
     });
   });
 

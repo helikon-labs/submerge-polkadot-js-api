@@ -23,7 +23,7 @@ describe('Compact', (): void => {
     it('has support for BigInt', (): void => {
       expect(
         new Compact(registry, 'u128', 123456789000123456789n).toHuman()
-      ).toEqual('123,456,789,000,123,456,789');
+      ).toEqual('123456789000123456789');
     });
 
     it('has the correct bitLength for constructor values (BlockNumber)', (): void => {

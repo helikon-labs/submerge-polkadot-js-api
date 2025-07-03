@@ -33,7 +33,7 @@ describe('WrapperKeepOpaque', (): void => {
     expect(u32.unwrap().toNumber()).toEqual(1234567);
 
     expect(u32.toHex()).toEqual('0x87d61200');
-    expect(u32.toHuman()).toEqual('1,234,567');
+    expect(u32.toHuman()).toEqual('1234567');
     expect(u32.toJSON()).toEqual('0x87d61200');
     expect(u32.toRawType()).toEqual('WrapperKeepOpaque<u32>');
     expect(u32.toString()).toEqual('1234567');

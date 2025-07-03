@@ -13,11 +13,11 @@ describe('Exposure', (): void => {
       registry.createType('Exposure', '0x0fd2c5f6bc904d990f94373671da716d04fe65717dad0447d715f660a0a58411de509b42e6efb8375f562f58a554d5860e0f3e8ec04bb6db2b').toHuman()
     ).toEqual({
       others: [{
-        value: '12.3449 kUnit',
+        value: '12344999999999550',
         who: '5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc'
       }],
-      own: '30.8059 kUnit',
-      total: '43.1509 kUnit'
+      own: '30805955477649300',
+      total: '43150955477648850'
     });
   });
 });

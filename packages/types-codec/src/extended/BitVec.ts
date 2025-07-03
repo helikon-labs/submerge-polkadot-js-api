@@ -108,12 +108,25 @@ export class BitVec extends Raw {
    * @description Converts the Object to to a human-friendly JSON, with additional fields, expansion and formatting of information
    */
   public override toHuman (): string {
-    return `0b${
-      [...this.toU8a(true)]
-        .map((d) => `00000000${d.toString(2)}`.slice(-8))
-        .map((s) => this.#isMsb ? s : s.split('').reverse().join(''))
-        .join('_')
-    }`;
+    const u8a = this.toU8a(true);
+
+    // If you need to handle bit reversal manually for LSB-first representations:
+    const bytes = this.#isMsb
+      ? u8a
+      : u8a.map((byte) =>
+        parseInt(
+          byte
+            .toString(2)
+            .padStart(8, '0')
+            .split('')
+            .reverse()
+            .join(''),
+          2
+        )
+      );
+
+    // Convert to hex string
+    return `0x${Buffer.from(bytes).toString('hex')}`;
   }
 
   /**

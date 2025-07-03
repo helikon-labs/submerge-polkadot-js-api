@@ -4,28 +4,16 @@
 import type { HexString } from '@polkadot/util/types';
 import type { AnyNumber, Inspect, INumber, IU8a, Registry, ToBn, UIntBitLength } from '../types/index.js';
 
-import { BN, BN_BILLION, BN_HUNDRED, BN_MILLION, BN_QUINTILL, bnToBn, bnToHex, bnToU8a, formatBalance, formatNumber, hexToBn, isBigInt, isBn, isFunction, isHex, isNumber, isObject, isString, isU8a, u8aToBn, u8aToNumber } from '@polkadot/util';
+import { BN, bnToBn, bnToHex, bnToU8a, hexToBn, isBigInt, isBn, isFunction, isHex, isNumber, isObject, isString, isU8a, u8aToBn, u8aToNumber } from '@polkadot/util';
 
 export const DEFAULT_UINT_BITS = 64;
 
 // Maximum allowed integer for JS is 2^53 - 1, set limit at 52
 // In this case however, we always print any >32 as hex
 const MAX_NUMBER_BITS = 52;
-const MUL_P = new BN(1_00_00);
-
-const FORMATTERS: [string, BN][] = [
-  ['Perquintill', BN_QUINTILL],
-  ['Perbill', BN_BILLION],
-  ['Permill', BN_MILLION],
-  ['Percent', BN_HUNDRED]
-];
 
 function isToBn (value: unknown): value is ToBn {
   return isFunction((value as ToBn).toBn);
-}
-
-function toPercentage (value: BN, divisor: BN): string {
-  return `${(value.mul(MUL_P).div(divisor).toNumber() / 100).toFixed(2)}%`;
 }
 
 /** @internal */
@@ -197,22 +185,8 @@ export abstract class AbstractInt extends BN implements INumber {
   /**
    * @description Converts the Object to to a human-friendly JSON, with additional fields, expansion and formatting of information
    */
-  public toHuman (_isExpanded?: boolean): string {
-    const rawType = this.toRawType();
-
-    if (rawType === 'Balance') {
-      return this.isMax()
-        ? 'everything'
-        // FIXME In the case of multiples we need some way of detecting which instance this belongs
-        // to. as it stands we will always format (incorrectly) against the first token defined
-        : formatBalance(this, { decimals: this.registry.chainDecimals[0], withSi: true, withUnit: this.registry.chainTokens[0] });
-    }
-
-    const [, divisor] = FORMATTERS.find(([type]) => type === rawType) || [];
-
-    return divisor
-      ? toPercentage(this, divisor)
-      : formatNumber(this);
+  public toHuman (_isExpanded?: boolean): any {
+    return this.toString();
   }
 
   /**

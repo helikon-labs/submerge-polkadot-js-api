@@ -377,7 +377,11 @@ export class Enum implements IEnum {
   public toHuman (isExtended?: boolean, disableAscii?: boolean): AnyJson {
     return this.#isBasic || this.isNone
       ? this.type
-      : { [this.type]: this.#raw.toHuman(isExtended, disableAscii) };
+      : {
+        type: this.type,
+        value: this.#raw.toHuman(isExtended, disableAscii)
+      };
+
   }
 
   /**

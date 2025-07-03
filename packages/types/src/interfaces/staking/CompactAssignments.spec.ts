@@ -196,7 +196,7 @@ describe('CompactAssignments', (): void => {
   });
 
   it('has a proper decoded toHuman() available', (): void => {
-    expect(test.votes2.toHuman()).toEqual([['1', [['2', '12,345']], '3']]);
+    expect(test.votes2.toHuman()).toEqual([['1', [['2', '12345']], '3']]);
   });
 
   it('decodes an actual solution from the chain', (): void => {
