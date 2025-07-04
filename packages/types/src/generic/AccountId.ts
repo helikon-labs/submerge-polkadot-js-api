@@ -46,7 +46,7 @@ class BaseAccountId extends U8aFixed {
    * @description Converts the Object to to a human-friendly JSON, with additional fields, expansion and formatting of information
    */
   public override toHuman (): string {
-    return this.toJSON();
+    return this.toHex();
   }
 
   /**

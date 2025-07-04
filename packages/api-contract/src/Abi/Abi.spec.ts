@@ -158,8 +158,8 @@ describe('Abi', (): void => {
       }, {});
 
       const expectedEvent = {
-        from: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
-        to: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+        from: '0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d',
+        to: '0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48',
         value: '123456789000000000000'
       };
 
@@ -190,8 +190,8 @@ describe('Abi', (): void => {
       }, {});
 
       const expectedEvent = {
-        from: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
-        to: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+        from: '0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d',
+        to: '0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48',
         value: '123456789000000000000'
       };
 
@@ -224,8 +224,8 @@ describe('Abi', (): void => {
       }, {});
 
       const expectedEvent = {
-        from: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
-        to: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+        from: '0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d',
+        to: '0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48',
         value: '123456789000000000000'
       };
 

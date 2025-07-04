@@ -14,7 +14,7 @@ describe('Exposure', (): void => {
     ).toEqual({
       others: [{
         value: '12344999999999550',
-        who: '5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc'
+        who: '0xfe65717dad0447d715f660a0a58411de509b42e6efb8375f562f58a554d5860e'
       }],
       own: '30805955477649300',
       total: '43150955477648850'

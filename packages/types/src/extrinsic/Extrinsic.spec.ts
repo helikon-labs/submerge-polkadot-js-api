@@ -83,7 +83,7 @@ describe('Extrinsic', (): void => {
 
         expect(extrinsic.version).toEqual(69);
         // expect(extrinsic.transactionExtensionVersion.toNumber()).toEqual(0);
-        expect(extrinsic.method.toHuman()).toEqual({ args: { dest: { type: 'Id', value: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY' }, value: '10000000000' }, method: 'transferAllowDeath', section: 'balances' });
+        expect(extrinsic.method.toHuman()).toEqual({ args: { dest: { type: 'Id', value: '0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d' }, value: '10000000000' }, method: 'transferAllowDeath', section: 'balances' });
         expect(extrinsic.era.toHuman()).toEqual({ type: 'MortalEra', value: { period: '64', phase: '6' } });
         expect(extrinsic.tip.toNumber()).toEqual(0);
         expect(extrinsic.mode.toNumber()).toEqual(0);
@@ -99,7 +99,7 @@ describe('Extrinsic', (): void => {
 
         expect(extrinsic.version).toEqual(69);
         // expect(extrinsic.transactionExtensionVersion.toNumber()).toEqual(0);
-        expect(extrinsic.method.toHuman()).toEqual({ args: { dest: { type: 'Id', value: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY' }, value: '10000000000' }, method: 'transferAllowDeath', section: 'balances' });
+        expect(extrinsic.method.toHuman()).toEqual({ args: { dest: { type: 'Id', value: '0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d' }, value: '10000000000' }, method: 'transferAllowDeath', section: 'balances' });
         expect(extrinsic.era.toHuman()).toEqual({ type: 'MortalEra', value: { period: '64', phase: '6' } });
         expect(extrinsic.tip.toNumber()).toEqual(0);
         expect(extrinsic.mode.toNumber()).toEqual(0);

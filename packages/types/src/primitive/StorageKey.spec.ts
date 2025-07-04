@@ -26,7 +26,7 @@ describe('StorageKey', (): void => {
 
       expect(key.toHuman()).toEqual([
         '16',
-        '5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY'
+        '0xbe5ddb1579b72e84524fc29e78609e3caf42e85aa118ebfe0b0ad404b5bdd25f'
       ]);
     });
 
@@ -36,7 +36,7 @@ describe('StorageKey', (): void => {
       key.setMeta(query['society']['defenderVotes'].meta);
 
       expect(key.toHuman()).toEqual([
-        '5D4yQHKfqCQYThhHmTfN1JEDi47uyDJc1xg9eZfAG1R7FC7J'
+        '0x2c709012f807af8fc3f0d2abb0c51ca9a88d4ef24d1a092bf89dacf5ce63ea1d'
       ]);
     });
   });
