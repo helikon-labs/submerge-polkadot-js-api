@@ -375,13 +375,40 @@ export class Enum implements IEnum {
    * @description Converts the Object to to a human-friendly JSON, with additional fields, expansion and formatting of information
    */
   public toHuman (isExtended?: boolean, disableAscii?: boolean): AnyJson {
-    return this.#isBasic || this.isNone
-      ? this.type
-      : {
-        type: this.type,
-        value: this.#raw.toHuman(isExtended, disableAscii)
+    if (this.#isBasic) {
+      return {
+        type: this.type
       };
+    } else if (this.isNone) {
+      return {
+        type: this.type,
+        value: null
+      };
+    } else {
+      const rawHuman = this.#raw.toHuman(isExtended, disableAscii);
 
+      // if the raw value is an array, return it as is
+      if (Array.isArray(rawHuman)) {
+        return {
+          type: this.type,
+          value: rawHuman
+        };
+      }
+
+      // if the raw value is an object, return it as is
+      if (rawHuman && typeof rawHuman === 'object') {
+        return {
+          type: this.type,
+          value: rawHuman
+        };
+      }
+
+      // for primitive values, wrap in an array
+      return {
+        type: this.type,
+        value: rawHuman
+      };
+    }
   }
 
   /**
